@@ -1,0 +1,312 @@
+{
+  "name": "Curso N8N",
+  "nodes": [
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.body.text.message }}",
+        "options": {
+          "systemMessage": "=#PROMPT FINAL\nSeu nome é Suporte Conflex, atue como um Assistente de Suporte na Psoft Softwares Ltda., uma empresa especializada em soluções ERP para indústrias de confecção. Você possui vasta experiência em atendimento ao cliente, e sua função principal é auxiliar os usuários na compreensão e utilização do software Conflex, respondendo dúvidas frequentes e direcionando-os para as informações necessárias.\n\n#PERSONA\nLinguagem clara, direta e acessível, evitando jargões técnicos excessivos;\nTom de voz amigável, empático e acolhedor, demonstrando paciência e compreensão em todas as interações;\nPostura proativa e segura ao transmitir informações sobre as funcionalidades e benefícios do software;\nEstilo de comunicação informal quando apropriado, sem perder a postura profissional necessária;\nDisposição para orientar passo a passo os usuários, fornecendo exemplos práticos e esclarecedores sempre que necessário;\n\n#OBJETIVO\nAumentar a eficiência do atendimento respondendo dúvidas frequentes de forma rápida e assertiva;\nMelhorar a experiência do usuário ao detalhar os recursos disponíveis do Conflex, explicando benefícios e funcionalidades do ERP;\nFacilitar o entendimento dos planos, preços e condições de contratação do software, utilizando comparações e exemplos ilustrativos;\nProvidenciar acesso fácil a vídeos demonstrativos e tutoriais do canal do YouTube, com links e instruções claras de acesso;\nAuxiliar na resolução de problemas simples, como dúvidas de configuração ou uso básico, encaminhando para o suporte especializado as questões mais complexas;\nConfirmar o recebimento de dúvidas e orientar os usuários sobre os próximos passos, garantindo um fluxo contínuo e sem atritos durante o atendimento;\n\n#COMPORTAMENTO\nPara atingir os objetivos, você deverá adotar o seguinte comportamento e ações:\nResponder automaticamente às principais dúvidas dos clientes utilizando uma base de conhecimento atualizada, que inclua informações provenientes do site da Psoft Softwares Ltda. e demais fontes oficiais;\nFornecer descrições detalhadas dos recursos do Conflex, destacando os benefícios e funcionalidades do sistema ERP, sempre de forma simples e compreensível;\nApresentar informações claras e objetivas sobre preços, planos e condições de contratação, com exemplos e comparações que facilitem o entendimento dos usuários;\nDirecionar os usuários para vídeos demonstrativos e tutoriais do canal do YouTube, informando diretamente os links e explicando como acessar o conteúdo de forma rápida;\nAuxiliar na resolução de problemas simples (por exemplo, dúvidas sobre configurações ou uso inicial) e, quando necessário, encaminhar questões mais complexas para a equipe de suporte especializada;\nConfirmar o recebimento de cada dúvida e orientar o usuário quanto aos próximos passos para assegurar que todas as questões sejam tratadas de maneira eficiente e sem interrupções no fluxo de atendimento;\nManter um registro profissional e organizado das interações, utilizando mensagens claras e bem estruturadas, além de sugerir fluxos de interação (por exemplo, caso o usuário não informe determinada informação, solicitar que ele informe o dado necessário) para facilitar a condução do atendimento;\n\n#REGRAS E RESTRIÇÕES\nUtilize sempre as informações disponibilizadas pela base de conhecimento oficial (website, documentação e vídeos do canal do YouTube da Psoft Softwares Ltda.) e também pela tool ´ConhecimentoTecnico´;\nEm caso de dúvidas muito específicas ou que não possam ser respondidas pela base de conhecimento, informe ao usuário que a questão será encaminhada para a equipe de suporte especializada;\nNunca fornecer informações que possam comprometer a segurança ou a privacidade dos dados dos clientes;\nNão comentar sobre outros softwares ou empresas concorrentes;\nNão enviar mensagens de forma ativa. O agente apenas responderá a perguntas feitas pelo usuário e nunca iniciará uma conversa por conta própria;\nEm caso de respostas ambíguas ou se o agente não tiver uma resposta para a pergunta, utilize uma mensagem padrão do tipo: \"Desculpe, não tenho essa informação no momento. Por favor, entre em contato com nosso suporte especializado para mais detalhes através do whatsapp (32) 99990-5330.\"\nSiga rigorosamente os protocolos e políticas interna de atendimento da Psoft Softwares Ltda., garantindo um atendimento ético e de alta qualidade;\nMantenha consistência na postura, evitando o uso de gírias ou termos excessivamente técnicos que possam dificultar o entendimento dos usuários;\n\n#INSTRUÇÕES ADICIONAIS\nSolicite o nome do usuário e se já é cliente da Psoft Informática\nSe já for cliente, solicite também o nome da empresa em que ele trabalha.\nSempre inicie a interação cumprimentando o usuário de forma cordial;\nSe apresente como um Assistente de Suporte na Psoft Softwares Ltda., uma empresa especializada em soluções ERP para indústrias de confecção\nSe o usuário não fornecer algum dado necessário para uma resposta completa, faça a pergunta específica (por exemplo: caso não haja informação sobre um recurso, pergunte: \"Você pode informar mais detalhes sobre o que deseja saber?\");\nUtilize listas e bullet points para organizar respostas e ajudar o usuário a identificar claramente cada passo, recurso ou informação;\nGaranta que todas as respostas sejam concisas, objetivas e, ao mesmo tempo, enriquecidas com a informação técnica necessária para um atendimento de excelência;\nUtilize o fluxo de perguntas adequado, garantindo que perguntas como \"Qual é sua dúvida principal?\" sejam feitas se a situação assim exigir para melhor direcionar o atendimento;\n\nLink uteis:\nCanal do youtube: https://www.youtube.com/@PsoftSoftwares\nPágina de Contato: https://www.psoftsoftwares.com.br/contato/#formulario\nPreços do conflex: R$ 400,00 para até 3 computadores (licenças)\nWhatsapp: https://wa.me/5532999905330\nCanal do Instagram: https://www.instagram.com/psoftsoftwares\nResponsável: João Carlo Duarte - https://wa.me/5532999905330\n\n#Consultas\nSempre que o usuário tiver alguma dúvida técnica sobre o conflex, chame a tool `ConhecimentoTecnico`\n\nValor do chão de fábrica ou PCP: Solicitar orçamento à parte através do whatsapp https://wa.me/5532999905330. Falar com o João Carlo"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -1040,
+        -256
+      ],
+      "id": "7e0d59dd-33e1-404f-8266-9892d9f6ba32",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -1136,
+        -32
+      ],
+      "id": "75e59246-78d3-4185-bbbe-2968236b23ad",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "6j4IcIRDimC0KC0d",
+          "name": "Curso N8N - Sem Codar"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "=chat_{{ $('Webhook').first().json.body.phone }}",
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        -1008,
+        -80
+      ],
+      "id": "04bc6345-05f6-49f8-8a17-7173bbb39d8e",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "description": "Sempre que o usuário tiver alguma dúvida técnica sobre o conflex, chame essa tool.",
+        "jsCode": "const infos_tecnico = `#Dúvidas sobre nossos Serviços e Soluções\n1- Este software é indicado para pequenas confecções ou só para grandes fábricas?\n   Ele é indicado para todos os tipos desde das micro até às grandes fábricas\n\n#Funcionalidades do sistema:\n-Automatização de Processos\nO conflex oferece a capacidade de automatizar\ntarefas repetitivas, reduzindo erros e liberando\ntempo para tarefas mais estratégicas.\n\n-Integração de Departamentos\nIntegre todas as áreas da empresa, desde vendas e\nmarketing até finanças e recursos humanos, para\numa visão global dos processos internos.\n\n-Análise de Dados Avançada\nAcesse relatórios e análises em tempo real para\ntomar decisões embasadas nos dados e identificar\noportunidades de melhoria.\n\n-Suporte Online\nCom a capacidade de acessar o sistema Online, a\nnossa equipe pode trabalhar de forma eficiente de\nqualquer lugar\n\n#Casos de sucesso de empresas que utilizam o sistema\n1 Aumento de Produtividade : Empresas que utilizam o sistema relataram um aumento significativo na produtividade da equipe.\n2 Otimização de Processos: Relatos consistentes de processos internos mais eficientes e redução de erros operacionais.\n3 Tomada de Decisão Estratégica: Utilização dos dados fornecidos pelo sistema para embasar decisões estratégicas e alcançar melhores resultados\n\n#Suporte e treinamento oferecidos\n1 Suporte Especializado: Equipe dedicada para auxiliar nas necessidades técnicas e operacionais do sistema.\n2 Treinamento Personalizado: Opções de treinamento específicas para cada área da empresa, garantindo uma implementação eficaz do sistema.\n3 Atualizações Contínuas: Beneficie-se de atualizações regulares para garantir que o sistema esteja sempre alinhado às necessidades empresariais em evolução\n\n#Módulo Chão de Fábrica ou PCP: Principais características:\n1- Cronoanálise do tempo de execução de cada processo das peças : Com a cronoanálise conseguimos medir o tempo de cada etapa do processo de fabricação da peça. Feito isso a indústria saberá a capacitade de produção em minutos, horas ou dia da peça em questão, conseguindo assim fazer o planejamento da produção diária da fábrica\n2- Distribuição da Produção Diária: Com o processo de Distribuição da Produção conseguimos planejar a produção diária da fábrica, informando assim a quantidade e o tempo necessário para executar cada processo da peças da produção, dentro do horário de funcionamento da fábrica\n3- Gerenciamento da Produção: Através do aplicativo de gerenciamento do chão de fábrica, os supervisores e gerentes de produção conseguem gerenciar todos os processos que estão em execução, informando o início e o término destes.\n4- Acompanhamento da Produção: Através da tela da televisão, tanto os supervisores quanto os funcionários poderão acompanhar os processos em execução, sabendo a hora que iniciou, a quantidade de peças a fabricar e quando terá que terminar. O aplicativo de acompanhamento emitirá um alerta na tela quando o processo estiver faltando 5 minutos para terminar ou quando estiver em atraso.\n\n`\nreturn infos_tecnico"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolCode",
+      "typeVersion": 1.3,
+      "position": [
+        -896,
+        0
+      ],
+      "id": "fcd44752-23c6-45db-8a9a-ac8b8400a081",
+      "name": "ConhecimentoTecnico"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "conexao-n8n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -1536,
+        -256
+      ],
+      "id": "8dac13d6-eb4e-465f-aa12-de6ca8ecd334",
+      "name": "Webhook",
+      "webhookId": "c0c51442-02e3-43ef-9ba8-80869c1cda0d"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "40945783-6ddf-4601-8398-9c8373c4fe54",
+              "leftValue": "={{ $json.body.phone }}",
+              "rightValue": "553291134362",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        -1328,
+        -224
+      ],
+      "id": "ba28862a-bacf-4e62-9b44-815c5502a025",
+      "name": "Filter"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.z-api.io/instances/3E7B75E7CFB541372F48A6F61CAAA8C7/token/067E137C76652AE0A5253E1D/send-text",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "client-token",
+              "value": "F2d55e3a1b3ef426fa16fda65b153049bS"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "message",
+              "value": "={{ $json.output }}"
+            },
+            {
+              "name": "phone",
+              "value": "={{ $('Webhook').item.json.body.phone }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -688,
+        -256
+      ],
+      "id": "9c737fac-3e3b-41ca-8081-b6e3efc66ad6",
+      "name": "enviar_mensagem_whatsapp"
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "jcarloduarte.app.n8n.cloud",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.54",
+            "content-length": "732",
+            "accept-encoding": "gzip, br",
+            "cdn-loop": "cloudflare; loops=1; subreqs=1",
+            "cf-connecting-ip": "129.148.61.110",
+            "cf-ew-via": "15",
+            "cf-ipcountry": "BR",
+            "cf-ray": "98429ab5d3b14a71-GRU",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "cf-worker": "n8n.cloud",
+            "content-type": "application/json",
+            "origin": "https://api.z-api.io",
+            "server": "Z-API",
+            "x-forwarded-for": "129.148.61.110, 172.71.239.81",
+            "x-forwarded-host": "jcarloduarte.app.n8n.cloud",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "traefik-prod-users-gwc-44-68df68bcf-nbsj5",
+            "x-is-trusted": "yes",
+            "x-real-ip": "129.148.61.110",
+            "z-api-token": "067E137C76652AE0A5253E1D"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "isStatusReply": false,
+            "chatLid": "51312058216703@lid",
+            "connectedPhone": "553299905330",
+            "waitingMessage": false,
+            "isEdit": false,
+            "isGroup": false,
+            "isNewsletter": false,
+            "instanceId": "3E7B75E7CFB541372F48A6F61CAAA8C7",
+            "messageId": "2A00ED6D56E9783468B4",
+            "phone": "553291134362",
+            "fromMe": false,
+            "momment": 1758720289000,
+            "status": "RECEIVED",
+            "chatName": "JOAO CARLO Tim Jc",
+            "senderPhoto": null,
+            "senderName": "Jcmd",
+            "photo": "https://pps.whatsapp.net/v/t61.24694-24/325579480_752518956225627_3181219467341032751_n.jpg?ccb=11-4&oh=01_Q5Aa2gFaQ_RZO3cZQxxuCtfndaktfbFocM5FRJhkZXY8nmFjUQ&oe=68E114E3&_nc_sid=5e03e0&_nc_cat=100",
+            "broadcast": false,
+            "participantLid": null,
+            "forwarded": false,
+            "type": "ReceivedCallback",
+            "fromApi": false,
+            "text": {
+              "message": "Bom dia"
+            }
+          },
+          "webhookUrl": "https://jcarloduarte.app.n8n.cloud/webhook/conexao-n8n",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ConhecimentoTecnico": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "enviar_mensagem_whatsapp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "5120ecca-d58a-48ed-a885-e597ca9ca014",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1a483aa5b99bd4796e25cf76f0fd1a54f54fe7ad138f9a5c0b3108885ccb0380"
+  },
+  "id": "tCawYBEWeMuXdW3S",
+  "tags": [
+    {
+      "createdAt": "2025-09-17T20:45:21.828Z",
+      "updatedAt": "2025-09-17T20:45:21.828Z",
+      "id": "CxFzUkHVVaNHry7r",
+      "name": "Curso Sem Codar"
+    }
+  ]
+}

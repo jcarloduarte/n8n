@@ -1,0 +1,205 @@
+{
+  "name": "Contas a Pagar",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "curso_n8n_CP",
+        "returnAll": true
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        -1056,
+        -288
+      ],
+      "id": "fe186763-f891-49f0-87fd-74cdb35ef2e5",
+      "name": "Contas a Pagar",
+      "credentials": {
+        "supabaseApi": {
+          "id": "fVrjcxdd160dG6S0",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "90914aac-a955-4c5a-92d7-50045e7d3b01",
+              "leftValue": "={{ $json.pago }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "false",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "8527b5be-65e5-4939-8312-fc4640d1c599",
+              "leftValue": "={{ $json.data_vencimento }}",
+              "rightValue": "={{ new Date().toISOString().split('T')[0] }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -848,
+        -288
+      ],
+      "id": "cf978c83-2955-4eef-90b5-a8f8f729bb78",
+      "name": "Contas Não Pagas e no vencimento"
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "=\nContas a Pagar hoje:\n**{{ $json.descricao }}** : Valor: **R$ {{ $json.valor }}**\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        -432,
+        -384
+      ],
+      "id": "fb4c007f-f0df-4f7b-aa99-f3691f8eb60a",
+      "name": "Discord",
+      "webhookId": "ec8223b7-f0e7-4148-83cb-b19f807c5ae7",
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "nNckOWHVKBna9asP",
+          "name": "Discord Webhook account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "8a175732-c9d7-4c01-9455-bd53f6452ff3",
+              "name": "descricao",
+              "value": "={{ $json.descricao }}",
+              "type": "string"
+            },
+            {
+              "id": "dff960b7-db06-4fe6-a5b3-1dd1c35f309f",
+              "name": "valor",
+              "value": "={{ $json.valor }}",
+              "type": "number"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -640,
+        -384
+      ],
+      "id": "c7bc68cf-5e0c-4741-aea3-d47490eac963",
+      "name": "variáveis descricao e valor"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 8
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -1296,
+        -288
+      ],
+      "id": "71289162-f71c-4823-8910-13b336e355c5",
+      "name": "Schedule Trigger"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Contas a Pagar": {
+      "main": [
+        [
+          {
+            "node": "Contas Não Pagas e no vencimento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Contas Não Pagas e no vencimento": {
+      "main": [
+        [
+          {
+            "node": "variáveis descricao e valor",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "variáveis descricao e valor": {
+      "main": [
+        [
+          {
+            "node": "Discord",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Contas a Pagar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "54b7f9cf-c14a-4b4c-b57d-7bba7b71decf",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1a483aa5b99bd4796e25cf76f0fd1a54f54fe7ad138f9a5c0b3108885ccb0380"
+  },
+  "id": "9HNZXiKZx4pJruyJ",
+  "tags": [
+    {
+      "createdAt": "2025-09-17T20:45:21.828Z",
+      "updatedAt": "2025-09-17T20:45:21.828Z",
+      "id": "CxFzUkHVVaNHry7r",
+      "name": "Curso Sem Codar"
+    }
+  ]
+}
